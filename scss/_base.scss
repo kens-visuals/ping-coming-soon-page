@@ -1,0 +1,27 @@
+$color-primary: hsl(223, 87%, 63%);
+$color-primary--dark: hsl(209, 33%, 12%);
+$color-primary--light: hsl(223, 100%, 88%);
+$color-secondary: hsl(354, 100%, 66%);
+$color-tertiary: hsl(0, 0%, 59%);
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: 'Libre Franklin', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 1.6rem;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  justify-items: center;
+}

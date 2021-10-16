@@ -1,0 +1,91 @@
+.content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  min-height: 50vh;
+  margin: 3rem 0;
+
+  &__logo {
+    width: 5.5rem;
+    margin: 5rem 0;
+  }
+
+  &__header {
+    margin-bottom: 3rem;
+  }
+
+  &__heading {
+    color: $color-tertiary;
+    font-size: 1.4em;
+    font-weight: 300;
+    margin-bottom: 2rem;
+
+    &-span {
+      color: $color-primary--dark;
+      font-weight: 600;
+    }
+  }
+
+  &__text {
+    color: $color-primary--dark;
+    font-size: 0.75em;
+    font-weight: 300;
+  }
+
+  &__form {
+    width: 90%;
+
+    & > * {
+      border-radius: 10rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__input {
+    color: $color-primary--light;
+    width: 100%;
+    border: 1px solid $color-primary--light;
+    font-size: 1.3rem;
+    padding: 1rem 3rem;
+  }
+
+  &__error {
+  }
+
+  &__button {
+    width: 100%;
+  }
+
+  &__img {
+    // background-image: url(../images/illustration-dashboard.png);
+    // background-repeat: no-repeat;
+    // background-size: contain;
+    // padding: 40rem;
+    width: 100%;
+  }
+
+  &__icons {
+  }
+
+  &__icon {
+  }
+}
+
+.attribution {
+  font-size: 1rem;
+  text-align: center;
+  margin: 1rem 0;
+
+  &__link:link,
+  &__link:visited {
+    text-transform: uppercase;
+    // color: $color-primary;
+    transition: all 0.2s;
+  }
+
+  &__link:hover,
+  &__link:active {
+    // color: $color-secondary;
+  }
+}
