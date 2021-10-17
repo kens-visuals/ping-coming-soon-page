@@ -77,6 +77,7 @@
       color: rgba($color-secondary, 0.8);
     }
 
+    &:focus,
     &:focus-visible {
       outline: 1px solid $color-primary;
     }
@@ -112,6 +113,7 @@
     transition: all 0.2s;
 
     &:hover,
+    &:focus,
     &:active {
       cursor: pointer;
       opacity: 0.8;
@@ -135,6 +137,7 @@
   }
 
   &__icons {
+    list-style: none;
     margin-bottom: 2rem;
     display: flex;
     align-items: center;

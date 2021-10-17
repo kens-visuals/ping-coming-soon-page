@@ -78,7 +78,7 @@ body {
     display: inline-block; }
     .content__input::placeholder {
       color: rgba(150, 150, 150, 0.8); }
-    .content__input:focus-visible {
+    .content__input:focus, .content__input:focus-visible {
       outline: 1px solid #4f7df3; }
     @media (min-width: 768px) {
       .content__input {
@@ -104,7 +104,7 @@ body {
     font-size: clamp(1.3rem, 2vw, 1.6rem);
     padding: 1.1rem 3rem;
     transition: all 0.2s; }
-    .content__button:hover, .content__button:active {
+    .content__button:hover, .content__button:focus, .content__button:active {
       cursor: pointer;
       opacity: 0.8;
       box-shadow: rgba(79, 125, 243, 0.3) 0px 10px 10px 0px; }
@@ -120,6 +120,7 @@ body {
         margin: 5.5rem 0 1.5rem 0;
         padding: 0.5rem; } }
   .content__icons {
+    list-style: none;
     margin-bottom: 2rem;
     display: flex;
     align-items: center;
