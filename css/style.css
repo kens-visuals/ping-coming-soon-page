@@ -12,14 +12,15 @@ html {
 
 body {
   min-height: 100vh;
+  color: #969696;
   font-size: 1.6rem;
   display: grid;
   grid-template-rows: 1fr auto;
   justify-items: center; }
 
 .container {
-  width: 85%;
-  max-width: 400px; }
+  width: 84%;
+  max-width: 650px; }
 
 .content {
   display: flex;
@@ -28,50 +29,137 @@ body {
   text-align: center;
   min-height: 50vh;
   margin: 5rem 0; }
+  @media (min-width: 768px) {
+    .content {
+      margin: 4rem 0; } }
   .content__logo {
-    width: 5.5rem;
-    margin: 5rem 0; }
+    width: clamp(5.5rem, 15vw, 8.5rem);
+    margin: 3.5rem 0; }
+    @media (min-width: 768px) {
+      .content__logo {
+        margin: 4.5rem 0; } }
   .content__header {
     margin-bottom: 3rem; }
+    @media (min-width: 768px) {
+      .content__header {
+        margin-bottom: 0; } }
   .content__heading {
     color: #969696;
-    font-size: 1.4em;
+    font-size: clamp(1.4em, 4vw, 4.85rem);
     font-weight: 300;
-    margin-bottom: 2rem; }
+    margin-bottom: 1.8rem; }
     .content__heading-span {
       color: #151f29;
-      font-weight: 600; }
+      font-weight: 700; }
   .content__text {
     color: #151f29;
-    font-size: 0.75em;
+    font-size: clamp(0.75em, 2vw, 2rem);
     font-weight: 300; }
   .content__form {
     width: 90%; }
-    .content__form > * {
-      border-radius: 10rem; }
+    @media (min-width: 768px) {
+      .content__form {
+        width: 100%;
+        margin-top: 4.5rem;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center; } }
+  @media (min-width: 768px) {
+    .content__wrapper {
+      margin-right: 1.5rem;
+      flex: 0 1 65%; } }
   .content__input {
-    color: #c2d3ff;
+    color: #151f29;
     width: 100%;
     border: 1px solid #c2d3ff;
-    font-size: 1.3rem;
-    padding: 1rem 3rem;
-    display: inline-block;
-    margin-bottom: 1rem; }
+    border-radius: 10rem;
+    font-size: clamp(1.3rem, 2vw, 1.6rem);
+    padding: 1.1rem 3rem;
+    display: inline-block; }
+    .content__input::placeholder {
+      color: rgba(150, 150, 150, 0.8); }
+    .content__input:focus-visible {
+      outline: 1px solid #4f7df3; }
+    @media (min-width: 768px) {
+      .content__input {
+        margin-bottom: 0;
+        padding: 1.7rem 3rem; } }
+  .content__error {
+    width: 100%;
+    color: #ff5263;
+    font-style: italic;
+    margin: 0.8rem 0 2rem 0;
+    font-size: clamp(1rem, 2vw, 1.2rem); }
+    @media (min-width: 768px) {
+      .content__error {
+        text-align: left;
+        padding-left: 3rem; } }
   .content__button {
     width: 100%;
-    color: #fff;
+    color: white;
     background-color: #4f7df3;
+    box-shadow: rgba(79, 125, 243, 0.2) 0px 10px 10px 0px;
     border: 1px solid transparent;
-    font-weight: 300;
-    padding: 1rem 3rem; }
+    border-radius: 10rem;
+    font-size: clamp(1.3rem, 2vw, 1.6rem);
+    padding: 1.1rem 3rem;
+    transition: all 0.2s; }
+    .content__button:hover, .content__button:active, .content__button:focus {
+      cursor: pointer;
+      opacity: 0.8;
+      box-shadow: rgba(79, 125, 243, 0.3) 0px 10px 10px 0px; }
+    @media (min-width: 768px) {
+      .content__button {
+        padding: 1.8rem 1rem;
+        flex: 0 1 31%; } }
   .content__img {
     width: 100%;
-    margin-top: 7rem; }
+    margin-top: 4rem; }
+    @media (min-width: 768px) {
+      .content__img {
+        margin: 5.5rem 0 1.5rem 0;
+        padding: 0.5rem; } }
+  .content__icons {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .content__icons > * {
+      background-color: white;
+      border: 1px solid rgba(194, 211, 255, 0.5);
+      border-radius: 50%; }
+      .content__icons > *:not(:last-child) {
+        margin-right: 1.5rem; }
+    @media (min-width: 768px) {
+      .content__icons {
+        margin-bottom: 2rem; } }
+  .content__icon {
+    width: 3rem;
+    height: 3rem;
+    fill: #4f7df3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s; }
+    .content__icon svg {
+      width: 1.5rem; }
+    .content__icon:hover {
+      cursor: pointer;
+      fill: white;
+      background-color: #4f7df3; }
+  .content__copyright {
+    font-size: clamp(0.8rem, 2vw, 1.2rem);
+    margin-bottom: 0.5rem; }
 
 .attribution {
-  font-size: 1rem;
+  width: 50%;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.5rem;
   text-align: center;
-  margin: 1rem 0; }
+  margin-bottom: 5rem; }
   .attribution__link:link, .attribution__link:visited {
     text-transform: uppercase;
+    color: #4f7df3;
     transition: all 0.2s; }
+  .attribution__link:hover, .attribution__link:active {
+    color: #151f29; }

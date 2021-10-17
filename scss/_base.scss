@@ -1,8 +1,10 @@
 $color-primary: hsl(223, 87%, 63%);
 $color-primary--dark: hsl(209, 33%, 12%);
 $color-primary--light: hsl(223, 100%, 88%);
-$color-secondary: hsl(354, 100%, 66%);
-$color-tertiary: hsl(0, 0%, 59%);
+$color-secondary: hsl(0, 0%, 59%);
+$color-secondary--light: hsl(0, 0%, 100%);
+$color-red: hsl(354, 100%, 66%);
+$color-green: hsl(145, 63%, 49%);
 
 *,
 *::before,
@@ -20,6 +22,7 @@ html {
 
 body {
   min-height: 100vh;
+  color: $color-secondary;
   font-size: 1.6rem;
   display: grid;
   grid-template-rows: 1fr auto;

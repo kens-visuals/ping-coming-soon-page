@@ -6,89 +6,198 @@
   min-height: 50vh;
   margin: 5rem 0;
 
+  @media (min-width: 768px) {
+    margin: 4rem 0;
+  }
+
   &__logo {
-    width: 5.5rem;
-    margin: 5rem 0;
+    width: clamp(5.5rem, 15vw, 8.5rem);
+    margin: 3.5rem 0;
+
+    @media (min-width: 768px) {
+      margin: 4.5rem 0;
+    }
   }
 
   &__header {
     margin-bottom: 3rem;
+
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+    }
   }
 
   &__heading {
-    color: $color-tertiary;
-    font-size: 1.4em;
+    color: $color-secondary;
+    font-size: clamp(1.4em, 4vw, 4.85rem);
     font-weight: 300;
-    margin-bottom: 2rem;
+    margin-bottom: 1.8rem;
 
     &-span {
       color: $color-primary--dark;
-      font-weight: 600;
+      font-weight: 700;
     }
   }
 
   &__text {
     color: $color-primary--dark;
-    font-size: 0.75em;
+    font-size: clamp(0.75em, 2vw, 2rem);
     font-weight: 300;
   }
 
   &__form {
     width: 90%;
 
-    & > * {
-      border-radius: 10rem;
+    @media (min-width: 768px) {
+      width: 100%;
+      margin-top: 4.5rem;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+  }
+
+  &__wrapper {
+    @media (min-width: 768px) {
+      margin-right: 1.5rem;
+      flex: 0 1 65%;
     }
   }
 
   &__input {
-    color: $color-primary--light;
+    color: $color-primary--dark;
     width: 100%;
     border: 1px solid $color-primary--light;
-    font-size: 1.3rem;
-    padding: 1rem 3rem;
+    border-radius: 10rem;
+    font-size: clamp(1.3rem, 2vw, 1.6rem);
+    padding: 1.1rem 3rem;
     display: inline-block;
-    margin-bottom: 1rem;
+
+    &::placeholder {
+      color: rgba($color-secondary, 0.8);
+    }
+
+    &:focus-visible {
+      outline: 1px solid $color-primary;
+    }
+
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+      padding: 1.7rem 3rem;
+    }
   }
 
   &__error {
+    width: 100%;
+    color: $color-red;
+    font-style: italic;
+    margin: 0.8rem 0 2rem 0;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+
+    @media (min-width: 768px) {
+      text-align: left;
+      padding-left: 3rem;
+    }
   }
 
   &__button {
     width: 100%;
-    color: #fff;
+    color: $color-secondary--light;
     background-color: $color-primary;
+    box-shadow: rgba($color-primary, 0.2) 0px 10px 10px 0px;
     border: 1px solid transparent;
-    font-weight: 300;
-    padding: 1rem 3rem;
+    border-radius: 10rem;
+    font-size: clamp(1.3rem, 2vw, 1.6rem);
+    padding: 1.1rem 3rem;
+    transition: all 0.2s;
+
+    &:hover,
+    &:active,
+    &:focus {
+      cursor: pointer;
+      opacity: 0.8;
+      box-shadow: rgba($color-primary, 0.3) 0px 10px 10px 0px;
+    }
+
+    @media (min-width: 768px) {
+      padding: 1.8rem 1rem;
+      flex: 0 1 31%;
+    }
   }
 
   &__img {
     width: 100%;
-    margin-top: 7rem;
+    margin-top: 4rem;
+
+    @media (min-width: 768px) {
+      margin: 5.5rem 0 1.5rem 0;
+      padding: 0.5rem;
+    }
   }
 
   &__icons {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & > * {
+      background-color: $color-secondary--light;
+      border: 1px solid rgba($color-primary--light, 0.5);
+      border-radius: 50%;
+
+      &:not(:last-child) {
+        margin-right: 1.5rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__icon {
+    width: 3rem;
+    height: 3rem;
+    fill: $color-primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+
+    & svg {
+      width: 1.5rem;
+    }
+
+    &:hover {
+      cursor: pointer;
+      fill: $color-secondary--light;
+      background-color: $color-primary;
+    }
+  }
+
+  &__copyright {
+    font-size: clamp(0.8rem, 2vw, 1.2rem);
+    margin-bottom: 0.5rem;
   }
 }
 
 .attribution {
-  font-size: 1rem;
+  width: 50%;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.5rem;
   text-align: center;
-  margin: 1rem 0;
+  margin-bottom: 5rem;
 
   &__link:link,
   &__link:visited {
     text-transform: uppercase;
-    // color: $color-primary;
+    color: $color-primary;
     transition: all 0.2s;
   }
 
   &__link:hover,
   &__link:active {
-    // color: $color-secondary;
+    color: $color-primary--dark;
   }
 }
