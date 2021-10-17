@@ -159,6 +159,16 @@
   }
 
   &__icon {
+    transition: all 0.2s;
+
+    &:hover {
+      cursor: pointer;
+      fill: $color-secondary--light;
+      background-color: $color-primary;
+    }
+  }
+
+  &__social-link {
     width: 3rem;
     height: 3rem;
     fill: $color-primary;
@@ -174,7 +184,6 @@
     &:hover {
       cursor: pointer;
       fill: $color-secondary--light;
-      background-color: $color-primary;
     }
   }
 

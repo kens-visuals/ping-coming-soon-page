@@ -135,6 +135,12 @@ body {
       .content__icons {
         margin-bottom: 2rem; } }
   .content__icon {
+    transition: all 0.2s; }
+    .content__icon:hover {
+      cursor: pointer;
+      fill: white;
+      background-color: #4f7df3; }
+  .content__social-link {
     width: 3rem;
     height: 3rem;
     fill: #4f7df3;
@@ -142,12 +148,11 @@ body {
     align-items: center;
     justify-content: center;
     transition: all 0.2s; }
-    .content__icon svg {
+    .content__social-link svg {
       width: 1.5rem; }
-    .content__icon:hover {
+    .content__social-link:hover {
       cursor: pointer;
-      fill: white;
-      background-color: #4f7df3; }
+      fill: white; }
   .content__copyright {
     font-size: clamp(0.8rem, 2vw, 1.2rem);
     margin-bottom: 0.5rem; }
