@@ -104,7 +104,7 @@ body {
     font-size: clamp(1.3rem, 2vw, 1.6rem);
     padding: 1.1rem 3rem;
     transition: all 0.2s; }
-    .content__button:hover, .content__button:active, .content__button:focus {
+    .content__button:hover, .content__button:active {
       cursor: pointer;
       opacity: 0.8;
       box-shadow: rgba(79, 125, 243, 0.3) 0px 10px 10px 0px; }

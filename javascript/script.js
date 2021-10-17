@@ -9,16 +9,18 @@ const validateEmail = function (input) {
   return reg.test(input);
 };
 
+const setErrorState = function (e, message) {
+  e.preventDefault();
+  errorText.innerHTML = message;
+  input.style.outline = '1px solid hsl(354, 100%, 66%)';
+  input.setAttribute('aria-invalid', true);
+  input.setAttribute('aria-describedby', errorText.id);
+};
+
 form.addEventListener('submit', (e) => {
-  if (
-    input.value == null ||
-    input.value === '' ||
-    !validateEmail(input.value)
-  ) {
-    e.preventDefault();
-    input.style.outline = '1px solid hsl(354, 100%, 66%)';
-    errorText.innerHTML = 'Please provide a valid email address';
-    input.setAttribute('aria-invalid', true);
-    input.setAttribute('aria-describedby', errorText.id);
+  if (input.value === '') {
+    setErrorState(e, 'Whoops! It looks like you forgot to add your email');
+  } else if (input.value == null || !validateEmail(input.value)) {
+    setErrorState(e, 'Please provide a valid email address');
   }
 });

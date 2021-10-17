@@ -112,8 +112,7 @@
     transition: all 0.2s;
 
     &:hover,
-    &:active,
-    &:focus {
+    &:active {
       cursor: pointer;
       opacity: 0.8;
       box-shadow: rgba($color-primary, 0.3) 0px 10px 10px 0px;
