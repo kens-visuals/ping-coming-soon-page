@@ -48,7 +48,7 @@ Users should be able to:
 
 ### What I learned
 
-It was a fun and simple project, the layout was really easy to put together. I was already familiar with the functionality, it reminded me of Base Apparel project. So I didn't specifically learn anything new, but I definitely practiced a lot of things from the last project, specifically `clamp()`. I'm really excited about the new functions and property that CSS comes up with. I can't wait for `subgrid` to be available on all the browsers, so we can build layouts more easily.
+It was a fun and simple project, the layout was really easy to put together. I was already familiar with the functionality, it reminded me of Base Apparel project. So I didn't specifically learn anything new, but I definitely practiced a lot of things from the last project, specifically `clamp()`. I'm really excited about the new functions and properties that CSS is coming up with. I can't wait for `subgrid` to be available on all the browsers, so we can build layouts more easily.
 
 ### Useful resources
 
