@@ -1,6 +1,7 @@
 const form = document.querySelector('.js-form');
 const input = document.querySelector('.js-input');
 const errorText = document.querySelector('.js-error');
+const arialiveElement = document.querySelector('#emailHint');
 
 const validateEmail = function (input) {
   const reg =
@@ -17,10 +18,17 @@ const setErrorState = function (e, message) {
   input.setAttribute('aria-describedby', errorText.id);
 };
 
-form.addEventListener('submit', (e) => {
-  if (input.value === '') {
+const checkEamil = function (e) {
+  const emailInput = input.value.trim();
+
+  if (emailInput === '') {
+    arialiveElement.textContent =
+      'Whoops! It looks like you forgot to add your email';
     setErrorState(e, 'Whoops! It looks like you forgot to add your email');
-  } else if (input.value == null || !validateEmail(input.value)) {
+  } else if (emailInput == null || !validateEmail(emailInput)) {
+    arialiveElement.textContent = 'Please provide a valid email address';
     setErrorState(e, 'Please provide a valid email address');
   }
-});
+};
+
+form.addEventListener('submit', checkEamil);
